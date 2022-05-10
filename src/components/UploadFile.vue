@@ -1,7 +1,6 @@
 <template>
   <form @submit.prevent="onSubmit">
-    <label for="upload-file-input">File Picker ➡</label>
-    &nbsp;
+    <label for="upload-file-input">File Picker ➡</label>&nbsp;
     <input id="upload-file-input" type="file" ref="inputEl" />
     <button type="submit">Submit</button>
   </form>

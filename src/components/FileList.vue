@@ -19,33 +19,44 @@
         <td>
           {{ file.size }} bytes
         </td>
-        <td>
+        <td class="button-container">
           <button @click.prevent="download(file)">Download</button>
+          <button @click.prevent="deleteFile(file)">Delete</button>
         </td>
       </tr>
     </tbody>
   </table>
 </template>
 
+<style scoped>
+.button-container > * {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+</style>
+
 <script>
 import getStorageProvider from '@/lib/storageProvider'
 
-let downloader
+let downloader, access
 
 export default {
   name: 'FileList',
   data: () => ({
-    $downloader: null,
     files: []
   }),
   async mounted () {
     const sp = await getStorageProvider()
     downloader = await sp.getDownloader()
+    access = await sp.getAccess()
     this.files = await sp.myFiles()
   },
   methods: {
     download (file) {
       downloader.download(file.did).catch(e => console.error(e))
+    },
+    deleteFile (file) {
+      access.deleteFile(file.did).catch(e => console.error(e))
     }
   }
 }
