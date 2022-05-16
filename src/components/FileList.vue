@@ -22,6 +22,7 @@
         <td class="button-container">
           <button @click.prevent="download(file)">Download</button>
           <button @click.prevent="deleteFile(file)">Delete</button>
+          <button @click.prevent="share(file)">Share</button>
         </td>
       </tr>
     </tbody>
@@ -53,10 +54,14 @@ export default {
   },
   methods: {
     download (file) {
-      downloader.download(file.did).catch(e => console.error(e))
+      downloader.download(file.did).catch(e => window.alert(e))
     },
     deleteFile (file) {
-      access.deleteFile(file.did).catch(e => console.error(e))
+      access.deleteFile(file.did).catch(e => window.alert(e))
+    },
+    share (file) {
+      const addr = window.prompt('Enter an address:')
+      access.share(['0x' + file.did], [addr]).catch(e => window.alert(e))
     }
   }
 }
