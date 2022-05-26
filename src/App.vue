@@ -6,7 +6,7 @@
 <script>
 import HelloWorld from '@/components/HelloWorld'
 
-import getStorageProvider from '@/lib/storageProvider'
+import getStorageProvider, { getWalletInstance } from '@/lib/storageProvider'
 
 export default {
   name: 'App',
@@ -17,9 +17,12 @@ export default {
     HelloWorld
   },
   async mounted () {
-    const sp = await getStorageProvider()
-    await sp.login()
-    this.loggedIn = true
+    const provider = await getWalletInstance()
+    provider.on('connect', async () => {
+      const sp = await getStorageProvider(provider)
+      await sp.login()
+      this.loggedIn = true
+    })
   }
 }
 </script>
