@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@arcana/auth": "^0.1.0",
+    "@arcana/storage": "^0.2.0",
     "core-js": "^3.8.3",
     "node-polyfill-webpack-plugin": "^1.1.4",
     "vue": "^3.2.13"
