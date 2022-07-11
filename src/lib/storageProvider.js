@@ -5,8 +5,8 @@ let auth
 let storageProvider
 
 export async function getWalletInstance () {
-  if(!auth) {
-    const auth = new AuthProvider(process.env.VUE_APP_ARCANA_APP_ID)
+  if (!auth) {
+    auth = new AuthProvider(process.env.VUE_APP_ARCANA_APP_ID)
     await auth.init({ appMode: AppMode.Full, position: 'right' })
   }
   return auth.provider
