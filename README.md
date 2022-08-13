@@ -16,7 +16,7 @@ It does not have any code for invoking other features and functions of these int
 
 ## ⚙️ Installation
 
-### Deploy Software Dependencies
+### Download Software Dependencies
 
 ```
 yarn install
