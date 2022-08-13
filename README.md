@@ -30,7 +30,7 @@ To re-compile and hot-reload during development, use:
 yarn serve
 ```
 
-### Production Build
+### Build for Production
 
 To compile and minify for production build, use:
 ```
