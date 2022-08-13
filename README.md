@@ -10,7 +10,7 @@
 
 # Sample Code: Basic Storage and Auth SDK Integration
 
-The repository `basic-storage-wallet-integration` contains sample code to demonstrate how you can integrate your [Vue JavaScript Framework](https://vuejs.org/) UI application with Arcana [Auth](https://github.com/arcana-network/auth) and [Storage](https://github.com/arcana-network/storage) SDKs. 
+The repository `basic-storage-wallet-integration` contains sample code to demonstrate how you can integrate your [Vue JavaScript Framework](https://vuejs.org/) UI application with Arcana [Auth](https://github.com/arcana-network/auth) and [Storage](https://github.com/arcana-network/storage) SDKs.
 
 It does not have any code for invoking other features and functions of these integrated SDKs.  Check out Arcana [Sample Demo App](https://github.com/arcana-network/demo-app) repository for a full fledged sample dApp that integrates with Arcana SDKs and plugs in Auth and Storage functionalities.
 
@@ -49,7 +49,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/) for customization d
 
 ## 📚 Usage
 
-You can utilize the source code in this repository for getting started with Arcana Network SDKs. Use these as stand alone basic applications to integrate with the latest Auth and Storage SDK.  You may plug in additional functionality and try out various features of the SDKs.
+You can utilize the source code in this repository for getting started with Arcana Network SDKs. Use it to build a stand alone basic Vue application that integrates with the latest Auth and Storage SDK.  You may plug in additional functionality and try out various features of the SDKs.
 
 See [Arcana Documentation](https://docs.beta.arcana.network/) for user guides and SDK Reference Guides.  
 
