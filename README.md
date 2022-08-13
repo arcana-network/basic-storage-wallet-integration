@@ -22,7 +22,7 @@ It does not have any code for invoking other features and functions of these int
 yarn install
 ```
 
-### Run Development Server
+### Run the Development Server
 
 To re-compile and hot-reload during development, use:
 
