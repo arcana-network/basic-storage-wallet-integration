@@ -16,13 +16,13 @@ It does not have any code for invoking other features and functions of these int
 
 ## ⚙️ Installation
 
-### Deploy Software Dependencies
+### Download Software Dependencies
 
 ```
 yarn install
 ```
 
-### Run Development Server
+### Run the Development Server
 
 To re-compile and hot-reload during development, use:
 
@@ -30,7 +30,7 @@ To re-compile and hot-reload during development, use:
 yarn serve
 ```
 
-### Production Build
+### Build for Production
 
 To compile and minify for production build, use:
 ```
@@ -57,7 +57,7 @@ To get started with Arcana SDKs quickly, you can also check out other [code samp
 
 ## 💡 Support
 
-For any queries regarding this repository usage, contact [Arcana support team](mailto:support@arcana.network).
+For any queries regarding this repository usage, contact the [Arcana Support Team](mailto:support@arcana.network).
 
 ## ℹ️ License
 
