@@ -61,7 +61,7 @@ export default {
     },
     share (file) {
       const addr = window.prompt('Enter an address:')
-      access.share(['0x' + file.did], [addr]).catch(e => window.alert(e))
+      access.share(file.did, [addr], null).catch(e => window.alert(e))
     }
   }
 }
