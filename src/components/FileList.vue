@@ -56,12 +56,14 @@ export default {
     download (file) {
       downloader.download(file.did).catch(e => window.alert(e))
     },
-    deleteFile (file) {
-      access.deleteFile(file.did).catch(e => window.alert(e))
+    async deleteFile (file) {
+      await access.deleteFile(file.did).catch(e => window.alert(e))
+      window.alert('File deleted. Reload to see the new file list.')
     },
-    share (file) {
+    async share (file) {
       const addr = window.prompt('Enter an address:')
-      access.share(file.did, [addr], null).catch(e => window.alert(e))
+      await access.share(file.did, [addr], null).catch(e => window.alert(e))
+      window.alert('File shared.')
     }
   }
 }
